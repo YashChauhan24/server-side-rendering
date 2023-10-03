@@ -1,0 +1,62 @@
+<html>
+  <head>
+    <title>Add Mobile</title>
+    <style>
+      .main-div {
+        max-width: 500px;
+      }
+      .center {
+        text-align: center;
+      }
+      .green {
+        color: rgb(17, 216, 17);
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="main-div">
+      <div class="center">
+        <h3>Add Mobile</h3>
+      </div>
+      <form action="/mobile/" method="post">
+        <table>
+          <tr>
+            <td><label for="mobileName">Mobile Name</label></td>
+            <td><input type="text" name="mobileName" /></td>
+          </tr>
+          <tr>
+            <td>
+              <label for="mobileModel">Mobile Model</label>
+            </td>
+            <td>
+              <input type="text" name="mobileModel" />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="mobileDiscription">Mobile Discription</label>
+            </td>
+            <td>
+              <textarea name="mobileDiscription" cols="30" rows="3"></textarea>
+            </td>
+          </tr>
+          <tr></tr>
+          <tr>
+            <td colspan="2" class="center">
+              <input type="submit" name="savebtn" value="save Mobile" />
+            </td>
+          </tr>
+        </table>
+      </form>
+      <% if(typeof mobileDetails!= 'undefined'){%>
+      <div>
+        Your Mobile
+        <b class="green"><%= mobileDetails.mobileName %></b> has been
+        successfully saved!
+      </div>
+      <%}%>
+    </div>
+    <div><a href="/mobile/">Mobile List</a></div>
+  </body>
+</html>

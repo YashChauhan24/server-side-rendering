@@ -1,0 +1,38 @@
+<html>
+  <head>
+    <title>Mobile list</title>
+    <style>
+      .main-div {
+        max-width: 700px;
+      }
+      .center {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main-div">
+      <div class="center"><h4>Mobile List</h4></div>
+      <table border="1">
+        <tr>
+          <th>Sr.No.</th>
+          <th>Mobile Id</th>
+          <th>Mobile Name</th>
+          <th>Mobile Model</th>
+          <th>Mobile Discription</th>
+          <th>Action</th>
+        </tr>
+        <%mobileList.map((mobile,index)=>{%>
+        <tr>
+          <td class="center"><%=index+1%></td>
+          <td><%=mobile._id%></td>
+          <td><%=mobile.mobileName%></td>
+          <td><%=mobile.mobileModel%></td>
+          <td><%=mobile.mobileDiscription%></td>
+          <td><a href="/mobile/edit/<%=mobile._id%>">Edit</a></td>
+        </tr>
+        <% }) %>
+      </table>
+    </div>
+  </body>
+</html>
