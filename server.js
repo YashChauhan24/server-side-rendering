@@ -11,7 +11,7 @@ app.use(formidable());
 app.use("/", appRouter);
 
 const url =
-  "mongodb+srv://admin:Launchpad_123@cluster0.lmpwomg.mongodb.net/?retryWrites=true&w=majority&appName=AtlasApp";
+  "";
 mongoose
   .connect(url, {
     dbName: "launchpad",
